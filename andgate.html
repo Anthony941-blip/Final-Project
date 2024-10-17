@@ -2,27 +2,44 @@
 <html>
 <head>
     <title>AND</title>
-	<style>
-.button {
-  background-color: #008CBA; /* Blue */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
+    <style>
+        .button {
+            background-color: #008CBA; /* Blue */
+            border: none;
+            color: white;  
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="javascript.js"></script>
+    <script>
+        function toggleImage() {
+            const image = document.getElementById("toggleImage");
+            if (image.src.includes("button-off-xxl.png")) {
+                image.src = "https://www.iconsdb.com/icons/preview/green/button-on-xxl.png";
+            } else {
+                image.src = "https://www.iconsdb.com/icons/preview/red/button-off-xxl.png";
+            }
+            toggleInputOne(); // Call your existing function
+        }
+
+        function toggleImage2() {
+            const image2 = document.getElementById("toggleImage2");
+            if (image2.src.includes("button-off-xxl.png")) {
+                image2.src = "https://www.iconsdb.com/icons/preview/green/button-on-xxl.png";
+            } else {
+                image2.src = "https://www.iconsdb.com/icons/preview/red/button-off-xxl.png";
+            }
+            toggleInputTwo(); // Call your existing function
+        }
+    </script>
 </head>
 <body>
-
-<script src = "javascript.js"></script>
-<script> 
-
-</script>
 
 <button class="button" onclick="and()">Run</button>
 <p>
@@ -30,9 +47,9 @@
 <table style="width:100%">
     <tr>
         <td>
-            <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png" id="toggleImage" onclick="toggleImage(); toggleInputOne();" />
+            <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png" id="toggleImage" onclick="toggleImage();" />
             <br>
-            <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png" id="toggleImage2" onclick="toggleImage2(); toggleInputTwo();" />
+            <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.png" id="toggleImage2" onclick="toggleImage2();" />
         </td>
         <td>
             <img id="andGate" src="and2off.PNG" />
@@ -42,10 +59,6 @@
 
 <a href="index.html">Back to Home</a>
 </p>
-
-
-
-
 
 </body>
 </html>
