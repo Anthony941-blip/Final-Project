@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Themed JavaScript Example</title>
+    <style>
+        body {
+            background-color: #4CAF50; /* Jungle green */
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: #FFD700; /* Gold color for buttons */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FFA500; /* Darker gold on hover */
+        }
+
+        img {
+            border: 5px solid #FFD700; /* Gold border around image */
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        .jungle-background {
+            background-image: url('jungle-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body class="jungle-background">
+
+<h2>What Can JavaScript Do?</h2>
+<p>JavaScript can change HTML attribute values.</p>
+<p>In this case, JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="changeImage('MONKEY.png')">Monkey is hungry</button>
+<button onclick="changeImage('banana.png')">Give banana to monkey NOW!!</button>
+<button onclick="changeImage('apple.jpg')">Give apple to monkey</button>
+<button onclick="changeImage('grape.jpg')">Give grapes to monkey</button>
+
+<img id="myImage" src="MONKEY.png" style="width:100px">
+
+<script>
+function changeImage(imageSrc) {
+    document.getElementById('myImage').src = imageSrc;
+}
+</script>
+
+</body>
+</html>
